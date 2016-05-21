@@ -14,6 +14,15 @@
 		7F54CAC51BB8579000D43A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F54CAC31BB8579000D43A12 /* LaunchScreen.storyboard */; };
 		7F54CAD01BB8579000D43A12 /* TODOLISTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CACF1BB8579000D43A12 /* TODOLISTTests.swift */; };
 		7F54CADB1BB8579000D43A12 /* TODOLISTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CADA1BB8579000D43A12 /* TODOLISTUITests.swift */; };
+		7F54CAEA1BB858D900D43A12 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CAE81BB858D900D43A12 /* ToDoTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		7F54CAEB1BB858D900D43A12 /* ToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F54CAE91BB858D900D43A12 /* ToDoTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		7F54CAED1BB85C2900D43A12 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F54CAEC1BB85C2900D43A12 /* icon.jpg */; settings = {ASSET_TAGS = (); }; };
+		7F54CAEF1BB8BC0C00D43A12 /* AddToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CAEE1BB8BC0C00D43A12 /* AddToDoListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		7F54CAF41BB94B6300D43A12 /* date.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7F54CAF01BB94B6300D43A12 /* date.jpeg */; settings = {ASSET_TAGS = (); }; };
+		7F54CAF51BB94B6300D43A12 /* family.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7F54CAF11BB94B6300D43A12 /* family.jpeg */; settings = {ASSET_TAGS = (); }; };
+		7F54CAF61BB94B6300D43A12 /* lager.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F54CAF21BB94B6300D43A12 /* lager.jpg */; settings = {ASSET_TAGS = (); }; };
+		7F54CAF71BB94B6300D43A12 /* work.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F54CAF31BB94B6300D43A12 /* work.jpg */; settings = {ASSET_TAGS = (); }; };
+		7F54CAF91BB94C5F00D43A12 /* SettingImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F54CAF81BB94C5F00D43A12 /* SettingImageViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,15 @@
 		7F54CAD61BB8579000D43A12 /* TODOLISTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TODOLISTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F54CADA1BB8579000D43A12 /* TODOLISTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOLISTUITests.swift; sourceTree = "<group>"; };
 		7F54CADC1BB8579000D43A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F54CAE81BB858D900D43A12 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		7F54CAE91BB858D900D43A12 /* ToDoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToDoTableViewCell.xib; sourceTree = "<group>"; };
+		7F54CAEC1BB85C2900D43A12 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		7F54CAEE1BB8BC0C00D43A12 /* AddToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToDoListViewController.swift; sourceTree = "<group>"; };
+		7F54CAF01BB94B6300D43A12 /* date.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = date.jpeg; sourceTree = "<group>"; };
+		7F54CAF11BB94B6300D43A12 /* family.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = family.jpeg; sourceTree = "<group>"; };
+		7F54CAF21BB94B6300D43A12 /* lager.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lager.jpg; sourceTree = "<group>"; };
+		7F54CAF31BB94B6300D43A12 /* work.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = work.jpg; sourceTree = "<group>"; };
+		7F54CAF81BB94C5F00D43A12 /* SettingImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +115,21 @@
 		7F54CAB91BB8579000D43A12 /* TODOLIST */ = {
 			isa = PBXGroup;
 			children = (
+				7F54CAF01BB94B6300D43A12 /* date.jpeg */,
+				7F54CAF11BB94B6300D43A12 /* family.jpeg */,
+				7F54CAF21BB94B6300D43A12 /* lager.jpg */,
+				7F54CAF31BB94B6300D43A12 /* work.jpg */,
+				7F54CAEC1BB85C2900D43A12 /* icon.jpg */,
 				7F54CABA1BB8579000D43A12 /* AppDelegate.swift */,
 				7F54CABC1BB8579000D43A12 /* ViewController.swift */,
 				7F54CABE1BB8579000D43A12 /* Main.storyboard */,
 				7F54CAC11BB8579000D43A12 /* Assets.xcassets */,
 				7F54CAC31BB8579000D43A12 /* LaunchScreen.storyboard */,
 				7F54CAC61BB8579000D43A12 /* Info.plist */,
+				7F54CAE81BB858D900D43A12 /* ToDoTableViewCell.swift */,
+				7F54CAE91BB858D900D43A12 /* ToDoTableViewCell.xib */,
+				7F54CAEE1BB8BC0C00D43A12 /* AddToDoListViewController.swift */,
+				7F54CAF81BB94C5F00D43A12 /* SettingImageViewController.swift */,
 			);
 			path = TODOLIST;
 			sourceTree = "<group>";
@@ -229,8 +256,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F54CAC51BB8579000D43A12 /* LaunchScreen.storyboard in Resources */,
+				7F54CAF41BB94B6300D43A12 /* date.jpeg in Resources */,
+				7F54CAED1BB85C2900D43A12 /* icon.jpg in Resources */,
+				7F54CAF61BB94B6300D43A12 /* lager.jpg in Resources */,
+				7F54CAF71BB94B6300D43A12 /* work.jpg in Resources */,
 				7F54CAC21BB8579000D43A12 /* Assets.xcassets in Resources */,
 				7F54CAC01BB8579000D43A12 /* Main.storyboard in Resources */,
+				7F54CAEB1BB858D900D43A12 /* ToDoTableViewCell.xib in Resources */,
+				7F54CAF51BB94B6300D43A12 /* family.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +288,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F54CAF91BB94C5F00D43A12 /* SettingImageViewController.swift in Sources */,
+				7F54CAEF1BB8BC0C00D43A12 /* AddToDoListViewController.swift in Sources */,
+				7F54CAEA1BB858D900D43A12 /* ToDoTableViewCell.swift in Sources */,
 				7F54CABD1BB8579000D43A12 /* ViewController.swift in Sources */,
 				7F54CABB1BB8579000D43A12 /* AppDelegate.swift in Sources */,
 			);

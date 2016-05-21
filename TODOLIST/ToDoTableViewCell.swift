@@ -10,6 +10,10 @@ import UIKit
 
 class ToDoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var toDoLabel: UILabel!
+    @IBOutlet weak var toDoImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
