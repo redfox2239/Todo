@@ -13,16 +13,21 @@ class AddToDoListViewController: UIViewController {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var toDoContent: UITextView!
     @IBOutlet weak var toDoDatePicker: UIDatePicker!
+    // 日付をフォーマットする人を用意する
+    let formatter = NSDateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // textViewにフォーカスする
         self.toDoContent.becomeFirstResponder()
         
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
-        let date = formatter.stringFromDate(self.toDoDatePicker.date)
+        self.formatter.dateFormat = "yyyy/MM/dd"
+        // DatePickerの値をフォーマットする
+        let date = self.formatter.stringFromDate(self.toDoDatePicker.date)
+        // ラベルに設定
         self.dayLabel.text = date
     }
 
@@ -30,7 +35,6 @@ class AddToDoListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -42,21 +46,28 @@ class AddToDoListViewController: UIViewController {
     }
     */
     
+    
+    // DatePickerの値変えたらどうする？
     @IBAction func changeDate(sender: AnyObject) {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd"
-        let date = formatter.stringFromDate(self.toDoDatePicker.date)
+        self.formatter.dateFormat = "yyyy/MM/dd"
+        // DatePickerの値をフォーマットする
+        let date = self.formatter.stringFromDate(self.toDoDatePicker.date)
+        // ラベルに設定
         self.dayLabel.text = date
     }
 
     @IBAction func tapSettingDayView(sender: AnyObject) {
-        self.toDoContent.endEditing(true)
+        // キーボード閉じる
+        self.toDoContent.resignFirstResponder()
     }
     
     @IBAction func tapNextViewButton(sender: AnyObject) {
+        // SettingImageViewControllerの画面を呼んでくる
         let vc = self.storyboard?.instantiateViewControllerWithIdentifier("SettingImageViewController") as! SettingImageViewController
+        // SettingImageViewControllerにデータを渡す
         vc.toDoContent = self.toDoContent.text
         vc.date = self.dayLabel.text
-        self.navigationController?.pushViewController(vc, animated: true)
+        // ナビゲーションコントローラーに移動を頼む
+        self.navigationController?.showViewController(vc, sender: nil)
     }
 }

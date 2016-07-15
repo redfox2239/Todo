@@ -10,14 +10,16 @@ import UIKit
 
 class SettingImageViewController: UIViewController {
     
+    // NSUserDefaultsに保存するためのテキストコンテンツ
     var toDoContent: String!
+    // NSUserDefaultsに保存するための日時
     var date: String!
     @IBOutlet weak var imgSelectView: UIView!
+    // NSUserDefaultsに保存するための画像ファイル名
     var toDoImage: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -25,7 +27,6 @@ class SettingImageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -38,8 +39,11 @@ class SettingImageViewController: UIViewController {
     */
 
     @IBAction func tapWorkImage(sender: UIGestureRecognizer) {
+        // タップした画像を取得
         let img = sender.view as! UIImageView
+        // 選択済みViewを移動する
         self.imgSelectView.center = img.center
+        // 選択した画像ファイルを特定しておく
         self.toDoImage = "work.jpg"
     }
     
@@ -62,16 +66,32 @@ class SettingImageViewController: UIViewController {
     }
 
     @IBAction func tapOKButton(sender: AnyObject) {
+        // NSUserDefaultsを用意
         let defaults = NSUserDefaults.standardUserDefaults()
-        var storeData = defaults.objectForKey("toDoData") as? Array<Dictionary<String,String>>
-        if(storeData == nil){
-            storeData = []
+        guard let toDoData = defaults.objectForKey("toDoData") else {
+            // storeDataがnilの場合、空配列を初期値としてセットする
+            defaults.setObject([], forKey: "toDoData")
+            defaults.synchronize()
+            return
         }
-        let saveData: Dictionary<String,String> = ["content": self.toDoContent!,"date": self.date!,"image": self.toDoImage!]
-        storeData?.append(saveData)
+        
+        var storeData = toDoData as! [[String:String]]
+
+        // 保存するデータを用意
+        let saveData: [String:String] = [
+            "content": self.toDoContent!,
+            "date": self.date!,
+            "image": self.toDoImage!
+        ]
+        
+        // データを追加
+        storeData.append(saveData)
+        
+        // NSUserDefaultsに保存する
         defaults.setObject(storeData, forKey: "toDoData")
         defaults.synchronize()
-        
+
+        // 今の画面を閉じる
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
